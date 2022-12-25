@@ -78,6 +78,48 @@ const Home: NextPage = () => {
                 </Stack>
               </CardBody>
             </Card>
+            <Card
+              border='2px'
+              borderColor='#868686'
+              style={{borderTop: 'none'}}
+              top='3'
+            >
+              <CardHeader pb={0}>
+                <Heading size='md'>Revenue Based Financing</Heading>
+              </CardHeader>
+
+              <CardBody p={0} className={styles.shadow}>
+                <Stack
+                  divider={
+                    <StackDivider borderColor='#868686' borderWidth={1} />
+                  }
+                  spacing='4'
+                >
+                  <Box px={5}>
+                    <Text pt='2' fontSize='xs' fontWeight='600'>
+                      By Lendistry
+                    </Text>
+                    <Text pt='2' fontSize='xs' fontWeight='600'>
+                      <Icon as={HiOutlineLocationMarker} mr={2} />
+                      Location
+                    </Text>
+                    <Text pt='2' fontSize='xs' fontWeight='600'>
+                      <Highlight
+                        query='12 days'
+                        styles={{ py: '1', fontWeight: 'bold' }}
+                      >
+                        Get Funded in 12 days
+                      </Highlight>
+                    </Text>
+                  </Box>
+                  <Box>
+                    <Text px={5} fontWeight='700' size='sm' color='purple.500'>
+                      $10,000 - $1,000,000
+                    </Text>
+                  </Box>
+                </Stack>
+              </CardBody>
+            </Card>
           </Flex>
         </Box>
       </main>
