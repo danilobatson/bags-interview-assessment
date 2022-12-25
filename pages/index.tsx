@@ -15,6 +15,7 @@ import {
 } from '@chakra-ui/react';
 import { Icon } from '@chakra-ui/react';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
+import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
@@ -45,7 +46,7 @@ const Home: NextPage = () => {
                 <Heading size='md'>Revenue Based Financing</Heading>
               </CardHeader>
 
-              <CardBody p={0}>
+              <CardBody p={0} className={styles.shadow}>
                 <Stack
                   divider={
                     <StackDivider borderColor='#868686' borderWidth={1} />
