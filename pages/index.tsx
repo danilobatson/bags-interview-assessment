@@ -10,8 +10,11 @@ import {
   Heading,
   Stack,
   StackDivider,
+  Highlight,
   Tag,
 } from '@chakra-ui/react';
+import { Icon } from '@chakra-ui/react';
+import { HiOutlineLocationMarker } from 'react-icons/hi';
 
 const Home: NextPage = () => {
   return (
@@ -25,8 +28,8 @@ const Home: NextPage = () => {
       <main>
         <Box maxW='960px' mx='auto' my={12} border='2px' borderColor='gray.200'>
           <Flex mt='20' align='center' direction='column'>
-            <Card>
-              <CardHeader>
+            <Card variant='elevated' border='2px' borderColor='#868686'>
+              <CardHeader pb={0}>
                 <Tag
                   pos='absolute'
                   top='-3'
@@ -39,35 +42,36 @@ const Home: NextPage = () => {
                     Good Fit
                   </Text>
                 </Tag>
-                <Heading float='right' size='md'>
-                  Client Report
-                </Heading>
+                <Heading size='md'>Revenue Based Financing</Heading>
               </CardHeader>
 
-              <CardBody>
-                <Stack divider={<StackDivider />} spacing='4'>
-                  <Box>
-                    <Heading size='xs' textTransform='uppercase'>
-                      Summary
-                    </Heading>
-                    <Text pt='2' fontSize='sm'>
-                      View a summary of all your clients over the last month.
+              <CardBody p={0}>
+                <Stack
+                  divider={
+                    <StackDivider borderColor='#868686' borderWidth={1} />
+                  }
+                  spacing='4'
+                >
+                  <Box px={5}>
+                    <Text pt='2' fontSize='xs' fontWeight='600'>
+                      By Lendistry
+                    </Text>
+                    <Text pt='2' fontSize='xs' fontWeight='600'>
+                      <Icon as={HiOutlineLocationMarker} mr={2} />
+                      Location
+                    </Text>
+                    <Text pt='2' fontSize='xs' fontWeight='600'>
+                      <Highlight
+                        query='12 days'
+                        styles={{ py: '1', fontWeight: 'bold' }}
+                      >
+                        Get Funded in 12 days
+                      </Highlight>
                     </Text>
                   </Box>
                   <Box>
-                    <Heading size='xs' textTransform='uppercase'>
-                      Overview
-                    </Heading>
-                    <Text pt='2' fontSize='sm'>
-                      Check out the overview of your clients.
-                    </Text>
-                  </Box>
-                  <Box>
-                    <Heading size='xs' textTransform='uppercase'>
-                      Analysis
-                    </Heading>
-                    <Text pt='2' fontSize='sm'>
-                      See a detailed analysis of all your business clients.
+                    <Text px={5} fontWeight='700' size='sm' color='purple.500'>
+                      $10,000 - $1,000,000
                     </Text>
                   </Box>
                 </Stack>
