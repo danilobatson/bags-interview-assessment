@@ -68,7 +68,7 @@ const Home: NextPage = () => {
                   variant='solid'
                   colorScheme='purple'
                 >
-                  <Text px={5} size='sm'>
+                  <Text px={5} fontSize='14px'>
                     Good Fit
                   </Text>
                 </Tag>
