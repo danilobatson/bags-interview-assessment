@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import {
   Box,
@@ -11,13 +12,36 @@ import {
   Stack,
   StackDivider,
   Highlight,
+  Button,
   Tag,
+  HStack,
 } from '@chakra-ui/react';
 import { Icon } from '@chakra-ui/react';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
+  const [windowSize, setWindowSize] = useState(0);
+
+  useEffect(() => {
+    // Handler to call on window resize
+    const handleResize = () => {
+      // Set window width to state
+      windowSize !== window.innerWidth
+        ? setWindowSize(window.innerWidth)
+        : null;
+    };
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, [windowSize]); // Re-run the effect if window size changes
+
   return (
     <div>
       <Head>
@@ -29,7 +53,12 @@ const Home: NextPage = () => {
       <main>
         <Box maxW='960px' mx='auto' my={12} border='2px' borderColor='gray.200'>
           <Flex mt='20' align='center' direction='column'>
-            <Card variant='elevated' border='2px' borderColor='#868686'>
+            <Card
+              variant='elevated'
+              border='2px'
+              borderColor='#868686'
+              style={{ width: '22.5rem', height: 'auto' }}
+            >
               <CardHeader pb={0}>
                 <Tag
                   pos='absolute'
@@ -81,11 +110,24 @@ const Home: NextPage = () => {
             <Card
               border='2px'
               borderColor='#868686'
-              style={{borderTop: 'none'}}
+              style={{ borderTop: 'none', width: '22.5rem', height: 'auto' }}
               top='3'
             >
               <CardHeader pb={0}>
-                <Heading size='md'>Revenue Based Financing</Heading>
+                <HStack spacing={8} direction='row'>
+                  <Heading size='md'>About The Lender</Heading>
+
+                  <Button
+                    style={{
+                      backgroundColor: windowSize <= 1350 ? 'black' : 'blue',
+                      color: 'white',
+                    }}
+                    size='sm'
+                    px={5}
+                  >
+                    Learn More
+                  </Button>
+                </HStack>
               </CardHeader>
 
               <CardBody p={0} className={styles.shadow}>
