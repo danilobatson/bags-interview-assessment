@@ -16,6 +16,7 @@ import {
   Tag,
   HStack,
   Spacer,
+  Badge,
 } from '@chakra-ui/react';
 import { Icon } from '@chakra-ui/react';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
@@ -46,6 +47,11 @@ const Home: NextPage = () => {
   const lorem =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel aliquam aliquam, nisl nisl aliquam nisl, nec aliquam nisl nisl sit amet nisl.';
 
+  const range = (num: number) =>
+    Array.from({ length: num }, (value, index) => index);
+
+  const placeholderArr = range(3);
+
   return (
     <div>
       <Head>
@@ -55,7 +61,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <Box maxW='960px' mx='auto' my={12} border='2px' borderColor='gray.200'>
+        <Box maxW='960px' mx='auto' my={12}>
           <Flex mt='20' align='center' direction='column'>
             <Card
               variant='elevated'
@@ -152,26 +158,22 @@ const Home: NextPage = () => {
                   spacing='4'
                 >
                   <Box px={5}>
-                    <Text pt='2' fontSize='xs' fontWeight='600'>
+                    <Text pt='2' fontSize='xs' fontWeight='600' pb={10}>
                       {lorem}
                     </Text>
-                    <Text pt='2' fontSize='xs' fontWeight='600'>
-                      <Icon as={HiOutlineLocationMarker} mr={2} />
-                      Location
-                    </Text>
-                    <Text pt='2' fontSize='xs' fontWeight='600'>
-                      <Highlight
-                        query='12 days'
-                        styles={{ py: '1', fontWeight: 'bold' }}
-                      >
-                        Get Funded in 12 days
-                      </Highlight>
-                    </Text>
-                  </Box>
-                  <Box>
-                    <Text px={5} fontWeight='700' size='sm' color='purple.500'>
-                      $10,000 - $1,000,000
-                    </Text>
+                    <Stack direction='column' spacing={4} pb={6}>
+                      {placeholderArr.map((item) => (
+                        <Tag
+                          key={item}
+                          className={`${styles.purpleText} ${styles.tag}`}
+                          borderRadius='full'
+                        >
+                          <Text fontSize='16px' fontWeight={700}>
+                            Lender Benefit
+                          </Text>
+                        </Tag>
+                      ))}
+                    </Stack>
                   </Box>
                 </Stack>
               </CardBody>
