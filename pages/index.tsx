@@ -72,7 +72,9 @@ const Home: NextPage = () => {
                     Good Fit
                   </Text>
                 </Tag>
-                <Heading size='md'>Revenue Based Financing</Heading>
+                <Text fontSize='2xl' fontWeight={700}>
+                  Revenue Based Financing
+                </Text>
               </CardHeader>
 
               <CardBody p={0} className={styles.shadow}>
