@@ -127,11 +127,11 @@ const Home: NextPage = () => {
             </Card>
             <Card
               border='2px'
-              borderColor='#868686'
+              borderColor='#C8C6C6'
               style={{ borderTop: 'none', width: '25rem', height: 'auto' }}
               top='3'
             >
-              <CardHeader pb={0}>
+              <CardHeader pt={20} pb={0}>
                 <HStack spacing={6} direction='row'>
                   <Heading size='md'>About The Lender</Heading>
                   <Spacer />
@@ -150,13 +150,8 @@ const Home: NextPage = () => {
                 </HStack>
               </CardHeader>
 
-              <CardBody p={0} className={styles.shadow}>
-                <Stack
-                  divider={
-                    <StackDivider borderColor='#868686' borderWidth={1} />
-                  }
-                  spacing='4'
-                >
+              <CardBody p={0}>
+                <Stack spacing='4'>
                   <Box px={5}>
                     <Text pt='2' fontSize='xs' fontWeight='600' pb={10}>
                       {lorem}
