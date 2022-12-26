@@ -15,6 +15,7 @@ import {
   Button,
   Tag,
   HStack,
+  Spacer,
 } from '@chakra-ui/react';
 import { Icon } from '@chakra-ui/react';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
@@ -42,6 +43,9 @@ const Home: NextPage = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, [windowSize]); // Re-run the effect if window size changes
 
+  const lorem =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel aliquam aliquam, nisl nisl aliquam nisl, nec aliquam nisl nisl sit amet nisl.';
+
   return (
     <div>
       <Head>
@@ -57,7 +61,7 @@ const Home: NextPage = () => {
               variant='elevated'
               border='2px'
               borderColor='#868686'
-              style={{ width: '22.5rem', height: 'auto' }}
+              style={{ width: '25rem', height: 'auto' }}
             >
               <CardHeader pb={0}>
                 <Tag
@@ -102,7 +106,13 @@ const Home: NextPage = () => {
                     </Text>
                   </Box>
                   <Box>
-                    <Text px={5} pb={2} fontWeight='700' fontSize='22px' className={styles.purpleText}>
+                    <Text
+                      px={5}
+                      pb={2}
+                      fontWeight='700'
+                      fontSize='22px'
+                      className={styles.purpleText}
+                    >
                       $10,000 - $1,000,000
                     </Text>
                   </Box>
@@ -112,13 +122,13 @@ const Home: NextPage = () => {
             <Card
               border='2px'
               borderColor='#868686'
-              style={{ borderTop: 'none', width: '22.5rem', height: 'auto' }}
+              style={{ borderTop: 'none', width: '25rem', height: 'auto' }}
               top='3'
             >
               <CardHeader pb={0}>
-                <HStack spacing={8} direction='row'>
+                <HStack spacing={6} direction='row'>
                   <Heading size='md'>About The Lender</Heading>
-
+                  <Spacer />
                   <Button
                     style={{
                       backgroundColor: windowSize <= 1350 ? 'black' : 'blue',
@@ -127,7 +137,9 @@ const Home: NextPage = () => {
                     size='sm'
                     px={5}
                   >
-                    Learn More
+                    <Text fontSize='md' fontWeight='600'>
+                      Learn More
+                    </Text>
                   </Button>
                 </HStack>
               </CardHeader>
@@ -141,7 +153,7 @@ const Home: NextPage = () => {
                 >
                   <Box px={5}>
                     <Text pt='2' fontSize='xs' fontWeight='600'>
-                      By Lendistry
+                      {lorem}
                     </Text>
                     <Text pt='2' fontSize='xs' fontWeight='600'>
                       <Icon as={HiOutlineLocationMarker} mr={2} />
