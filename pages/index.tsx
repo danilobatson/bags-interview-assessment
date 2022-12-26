@@ -85,14 +85,14 @@ const Home: NextPage = () => {
                   spacing='4'
                 >
                   <Box px={5}>
-                    <Text pt='2' fontSize='xs' fontWeight='600'>
+                    <Text pt='2' fontSize='s' fontWeight='600'>
                       By Lendistry
                     </Text>
-                    <Text pt='2' fontSize='xs' fontWeight='600'>
+                    <Text pt='2' fontSize='s' fontWeight='600'>
                       <Icon as={HiOutlineLocationMarker} mr={2} />
                       Location
                     </Text>
-                    <Text pt='2' fontSize='xs' fontWeight='600'>
+                    <Text pt='2' fontSize='14px' fontWeight='600'>
                       <Highlight
                         query='12 days'
                         styles={{ py: '1', fontWeight: 'bold' }}
