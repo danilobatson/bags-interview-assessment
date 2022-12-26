@@ -61,12 +61,12 @@ const Home: NextPage = () => {
             >
               <CardHeader pb={0}>
                 <Tag
+                  className={styles.purple}
                   pos='absolute'
                   top='-3'
                   right='5'
                   size='sm'
                   variant='solid'
-                  colorScheme='purple'
                 >
                   <Text px={5} fontSize='14px'>
                     Good Fit
@@ -102,7 +102,7 @@ const Home: NextPage = () => {
                     </Text>
                   </Box>
                   <Box>
-                    <Text px={5} fontWeight='700' size='sm' color='purple.500'>
+                    <Text px={5} pb={2} fontWeight='700' fontSize='22px' className={styles.purpleText}>
                       $10,000 - $1,000,000
                     </Text>
                   </Box>
