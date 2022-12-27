@@ -87,7 +87,7 @@ const Home: NextPage = () => {
                     Good Fit
                   </Text>
                 </Tag>
-                <Text fontSize='2xl' fontWeight={700}>
+                <Text fontSize={['s', 'xl', '2xl']} fontWeight={700}>
                   Revenue Based Financing
                 </Text>
               </CardHeader>
