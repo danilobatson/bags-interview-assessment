@@ -63,17 +63,7 @@ const Home: NextPage = () => {
       <main>
         <Box maxW='960px' mx='auto' my={12}>
           <Flex mt='20' align='center' direction='column'>
-            <Card
-              variant='elevated'
-              border='2px'
-              borderColor='#868686'
-              style={{
-                width: '25rem',
-                height: 'auto',
-                zIndex: 1,
-                backgroundColor: '#FFFFFF',
-              }}
-            >
+            <Card className={styles.primaryCard} variant='elevated'>
               <CardHeader pb={0}>
                 <Tag
                   className={styles.purple}
@@ -92,7 +82,7 @@ const Home: NextPage = () => {
                 </Text>
               </CardHeader>
 
-              <CardBody p={0} className={styles.shadow} >
+              <CardBody p={0} className={styles.shadow}>
                 <Stack
                   divider={
                     <StackDivider borderColor='#868686' borderWidth={1} />
@@ -116,7 +106,7 @@ const Home: NextPage = () => {
                       </Highlight>
                     </Text>
                   </Box>
-                  <Box >
+                  <Box>
                     <Text
                       px={5}
                       pb={2}
@@ -131,15 +121,7 @@ const Home: NextPage = () => {
               </CardBody>
             </Card>
             <Card
-              border='2px'
-              borderColor='#C8C6C6'
-              style={{
-                borderTop: 'none',
-                width: '25rem',
-                height: 'auto',
-                zIndex: -1,
-                backgroundColor: '#FFFFFF',
-              }}
+              className={styles.secondaryCard}
               top='-10'
             >
               <CardHeader pt={20} pb={0}>

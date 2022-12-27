@@ -3,7 +3,19 @@
 }
 
 .primaryCard {
-  z-index: 1;
+  width: 25rem;
+  height: auto;
+  border: 2px solid #868686;
+  background-color: #ffffff !important;
+  z-index: 1 !important;
+}
+
+.secondaryCard {
+  border-top: none;
+  width: 25rem;
+  height: auto;
+  border: 2px solid #C8C6C6;
+  z-index: -1 !important;
 }
 .noBorder {
   border-top: 'none' !important;
