@@ -92,7 +92,7 @@ const Home: NextPage = () => {
                 </Text>
               </CardHeader>
 
-              <CardBody p={0} className={styles.shadow} style={{ zIndex: 11 }}>
+              <CardBody p={0} className={styles.shadow} >
                 <Stack
                   divider={
                     <StackDivider borderColor='#868686' borderWidth={1} />
@@ -116,9 +116,8 @@ const Home: NextPage = () => {
                       </Highlight>
                     </Text>
                   </Box>
-                  <Box style={{ zIndex: 11 }}>
+                  <Box >
                     <Text
-                      style={{ zIndex: 11 }}
                       px={5}
                       pb={2}
                       fontWeight='700'
