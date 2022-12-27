@@ -67,7 +67,12 @@ const Home: NextPage = () => {
               variant='elevated'
               border='2px'
               borderColor='#868686'
-              style={{ width: '25rem', height: 'auto' }}
+              style={{
+                width: '25rem',
+                height: 'auto',
+                zIndex: 1,
+                backgroundColor: '#FFFFFF',
+              }}
             >
               <CardHeader pb={0}>
                 <Tag
@@ -87,7 +92,7 @@ const Home: NextPage = () => {
                 </Text>
               </CardHeader>
 
-              <CardBody p={0} className={styles.shadow}>
+              <CardBody p={0} className={styles.shadow} style={{ zIndex: 11 }}>
                 <Stack
                   divider={
                     <StackDivider borderColor='#868686' borderWidth={1} />
@@ -111,8 +116,9 @@ const Home: NextPage = () => {
                       </Highlight>
                     </Text>
                   </Box>
-                  <Box>
+                  <Box style={{ zIndex: 11 }}>
                     <Text
+                      style={{ zIndex: 11 }}
                       px={5}
                       pb={2}
                       fontWeight='700'
@@ -128,8 +134,14 @@ const Home: NextPage = () => {
             <Card
               border='2px'
               borderColor='#C8C6C6'
-              style={{ borderTop: 'none', width: '25rem', height: 'auto' }}
-              top='3'
+              style={{
+                borderTop: 'none',
+                width: '25rem',
+                height: 'auto',
+                zIndex: -1,
+                backgroundColor: '#FFFFFF',
+              }}
+              top='-10'
             >
               <CardHeader pt={20} pb={0}>
                 <HStack spacing={6} direction='row'>
