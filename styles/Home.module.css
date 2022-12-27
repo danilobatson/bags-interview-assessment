@@ -17,9 +17,6 @@
   border: 2px solid #C8C6C6;
   z-index: -1 !important;
 }
-.noBorder {
-  border-top: 'none' !important;
-}
 
 .purple {
   background-color: #7b5be4 !important;

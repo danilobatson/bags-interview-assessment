@@ -120,10 +120,7 @@ const Home: NextPage = () => {
                 </Stack>
               </CardBody>
             </Card>
-            <Card
-              className={styles.secondaryCard}
-              top='-10'
-            >
+            <Card className={styles.secondaryCard} top='-10'>
               <CardHeader pt={20} pb={0}>
                 <HStack spacing={6} direction='row'>
                   <Heading size='md'>About The Lender</Heading>
